@@ -9,7 +9,8 @@
     "lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
     "lint:prettier": "prettier --write \"src/**/*.{js,ts,json,tsx,css,less,scss,vue,html,md}\"",
     "lint:lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "git status && git add -A && git-cz"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -31,6 +32,8 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.9.4",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -69,6 +72,11 @@
     "*.md": [
       "prettier --write"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   },
   "eslintConfig": {
     "root": true,
