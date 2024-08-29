@@ -7,7 +7,7 @@
     <router-view />
   </div>
 </template>
-
+console.log('测试cherry-pick指令');
 <style>
 #app {
   /*  */
